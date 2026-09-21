@@ -1,13 +1,8 @@
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : Interactable
 {
-    void Start()
-    {
-        CoinManager.instance.AddCoinCount();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         CoinManager.instance.CoinCollected();
         Destroy(gameObject);
