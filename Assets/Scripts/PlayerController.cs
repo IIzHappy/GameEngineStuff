@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _flySpeed = 8;
 
     public float _loseHeight = -5;
+
+    public GameObject _projectile;
+    [SerializeField] float _shootDelay = 0.5f;
+    float _shootTimer = 0;
     
     void Start()
     {
@@ -68,6 +72,13 @@ public class PlayerController : MonoBehaviour
         if (gameObject.transform.position.y < _loseHeight)
         {
             Death();
+        }
+
+        _shootTimer += Time.deltaTime;
+        if (_shootTimer > _shootDelay)
+        {
+            Instantiate(_projectile, transform.position, Quaternion.identity);
+            _shootTimer -= _shootDelay;
         }
     }
 

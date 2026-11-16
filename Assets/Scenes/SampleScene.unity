@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 1019982243}
   - component: {fileID: 1019982242}
   - component: {fileID: 1019982244}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,13 +995,15 @@ MonoBehaviour:
   _startPoint: {fileID: 1498878206}
   _livesText: {fileID: 1947023670}
   _baseMoveSpeed: 8
-  _baseJumpHeight: 8
+  _baseJumpHeight: 2
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
   _canFly: 0
   _flySpeed: 8
   _loseHeight: -5
+  _projectile: {fileID: 2390904587507104707, guid: d912c1f8e92230847bc1fe8381639458, type: 3}
+  _shootDelay: 0.5
 --- !u!1001 &1462825391
 PrefabInstance:
   m_ObjectHideFlags: 0
