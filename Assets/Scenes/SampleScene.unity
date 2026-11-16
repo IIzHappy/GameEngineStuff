@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 1019982243}
   - component: {fileID: 1019982242}
   - component: {fileID: 1019982244}
+  - component: {fileID: 1019982245}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1002,8 +1003,21 @@ MonoBehaviour:
   _canFly: 0
   _flySpeed: 8
   _loseHeight: -5
+  _shootDelay: 0.2
+--- !u!114 &1019982245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019982239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f217d4c23e067d748af3650e87ec1dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _projectile: {fileID: 2390904587507104707, guid: d912c1f8e92230847bc1fe8381639458, type: 3}
-  _shootDelay: 0.5
+  _poolSize: 10
 --- !u!1001 &1462825391
 PrefabInstance:
   m_ObjectHideFlags: 0

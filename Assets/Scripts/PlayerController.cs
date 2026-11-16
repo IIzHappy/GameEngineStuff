@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
     public float _loseHeight = -5;
 
-    public GameObject _projectile;
     [SerializeField] float _shootDelay = 0.5f;
     float _shootTimer = 0;
     
@@ -77,7 +76,7 @@ public class PlayerController : MonoBehaviour
         _shootTimer += Time.deltaTime;
         if (_shootTimer > _shootDelay)
         {
-            Instantiate(_projectile, transform.position, Quaternion.identity);
+            ProjectileManager.Instance.SpawnProjectile();
             _shootTimer -= _shootDelay;
         }
     }
@@ -130,5 +129,10 @@ public class PlayerController : MonoBehaviour
         {
             _rb.linearVelocity.Set(0, 0);
         }
+    }
+
+    void InitProjectiles(int projectiles)
+    {
+
     }
 }
